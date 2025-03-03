@@ -1,0 +1,21 @@
+/* Write your CSS here */
+.list-item {
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  height: 350px;
+  width: 248px;
+}
+
+.red-text {
+  color: #e31a1a;
+}
+
+.green-text {
+  color: #18ed66;
+}

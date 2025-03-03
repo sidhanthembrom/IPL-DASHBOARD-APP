@@ -1,0 +1,23 @@
+/* Write your CSS here */
+.latest-match-container {
+  background-color: #0f172a;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.left-container {
+  width: 220px;
+}
+
+.right-container {
+  text-align: end;
+}

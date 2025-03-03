@@ -1,0 +1,10 @@
+/* Write your CSS here */
+.NotFound-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png');
+  background-position: center;
+  color: white;
+}
