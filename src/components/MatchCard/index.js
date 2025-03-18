@@ -4,6 +4,8 @@ import './index.css'
 const MatchCard = props => {
   const {eachMatch} = props
 
+  // console.log(eachMatch.match_status)
+
   return (
     <li className="list-item">
       <img
