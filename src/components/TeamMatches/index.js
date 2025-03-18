@@ -10,7 +10,7 @@ import MatchCard from '../MatchCard'
 import './index.css'
 
 class TeamMatches extends Component {
-  state = {isLoading: true, teamCardDetails: {}, won: 0, lost: 0, draw: 0}
+  state = {isLoading: true, teamCardDetails: {}, won: 0, lost: 0}
 
   componentDidMount = async () => {
     const {match} = this.props
@@ -32,7 +32,7 @@ class TeamMatches extends Component {
     )
   }
 
-  handleBackEvent = e => {
+  handleBackEvent = () => {
     const {history} = this.props
     history.push('/')
   }
@@ -43,7 +43,6 @@ class TeamMatches extends Component {
 
     let won = 0
     let lost = 0
-    // let draw = 0
 
     teamCardDetails.recentMatches.forEach(obj => {
       if (obj.match_status === 'Won') {
@@ -72,7 +71,9 @@ class TeamMatches extends Component {
           </div>
         ) : (
           <div className="teamMatches-container">
-            <button onClick={this.handleBackEvent}>Back</button>
+            <button type="button" onClick={this.handleBackEvent}>
+              Back
+            </button>
             <img
               width="100%"
               src={teamCardDetails.teamBannerUrl}
