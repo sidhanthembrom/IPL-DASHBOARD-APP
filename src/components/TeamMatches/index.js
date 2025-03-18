@@ -45,13 +45,13 @@ class TeamMatches extends Component {
     let lost = 0
     // let draw = 0
 
-    for (let obj of teamCardDetails.recentMatches) {
+    teamCardDetails.recentMatches.forEach(obj => {
       if (obj.match_status === 'Won') {
         won += 1
       } else {
         lost += 1
       }
-    }
+    })
     this.setState({won, lost})
   }
 
@@ -60,14 +60,14 @@ class TeamMatches extends Component {
     // console.log(won, lost)
 
     const dataForPie = [
-      {name: 'Wins', value: won, color: '#4CAF50'},
-      {name: 'Losses', value: lost, color: '#F44336'},
+      {name: 'Wins', value: won, color: '#4CAF50', id: 1},
+      {name: 'Losses', value: lost, color: '#F44336', id: 2},
     ]
 
     return (
       <div className="teamMatches-bg">
         {isLoading ? (
-          <div testid="loader">
+          <div data-testid="loader">
             <Loader type="Oval" color="#ffffff" height={50} width={50} />
           </div>
         ) : (
@@ -92,8 +92,8 @@ class TeamMatches extends Component {
                 dataKey="value"
                 label
               >
-                {dataForPie.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
+                {dataForPie.map(entry => (
+                  <Cell key={entry.id} fill={entry.color} />
                 ))}
               </Pie>
               <Tooltip />
