@@ -1,5 +1,5 @@
 // Write your code here
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import {Component} from 'react'
@@ -30,31 +30,29 @@ class Home extends Component {
     const {isLoading, teamsList} = this.state
 
     return (
-      <Link to="/">
-        <div className="app-container">
-          {isLoading ? (
-            <div testid="loader">
-              <Loader type="Oval" color="#ffffff" height={50} width={50} />
+      <div className="app-container">
+        {isLoading ? (
+          <div className="loader-container" data-testid="loader">
+            <Loader type="Oval" color="#ffffff" height={50} width={50} />
+          </div>
+        ) : (
+          <div className="bg-container">
+            <div className="heading-container">
+              <img
+                width="50px"
+                src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
+                alt="ipl logo"
+              />
+              <h1>IPL Dashboard</h1>
             </div>
-          ) : (
-            <div className="bg-container">
-              <div className="heading-container">
-                <img
-                  width="50px"
-                  src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
-                  alt="ipl logo"
-                />
-                <h1>IPL Dashboard</h1>
-              </div>
-              <ul className="list-container-for-Home">
-                {teamsList.map(eachTeam => (
-                  <TeamCard key={eachTeam.id} eachTeam={eachTeam} />
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      </Link>
+            <ul className="list-container-for-Home">
+              {teamsList.map(eachTeam => (
+                <TeamCard key={eachTeam.id} eachTeam={eachTeam} />
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     )
   }
 }

@@ -1,8 +1,7 @@
-/* Write your CSS here */
 .app-container {
   background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png');
   height: 100vh;
-  background-position: center;
+  background-position: cover;
   color: white;
   padding: 3rem 2rem;
   display: flex;
@@ -28,4 +27,17 @@
   padding: 0;
   list-style-type: none;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    height: 100%;
+  }
+
+  .loader-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

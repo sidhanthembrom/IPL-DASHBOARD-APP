@@ -1,4 +1,3 @@
-/* Write your CSS here */
 .teamMatches-bg {
   background-image: linear-gradient(#a4261d, #1e293b);
   /* height: 100vh; */
@@ -24,6 +23,7 @@
   list-style-type: none;
   padding: 0;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
 }

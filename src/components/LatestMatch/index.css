@@ -1,4 +1,3 @@
-/* Write your CSS here */
 .latest-match-container {
   background-color: #0f172a;
   color: white;
@@ -20,4 +19,15 @@
 
 .right-container {
   text-align: end;
+}
+
+@media(max-width: 425px){
+  .latest-match-container{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-container{
+    text-align: center;
+  }
 }

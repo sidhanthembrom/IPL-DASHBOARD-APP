@@ -7,12 +7,16 @@ const TeamCard = props => {
   const {eachTeam} = props
 
   return (
-    <Link to={`/team-matches/${eachTeam.id}`}>
-      <li className="list-item-TeamCard">
-        <img width="100px" src={eachTeam.teamImageUrl} alt={eachTeam.name} />
+    <li>
+      <Link className="list-item-TeamCard" to={`/team-matches/${eachTeam.id}`}>
+        <img
+          className="card-img"
+          src={eachTeam.teamImageUrl}
+          alt={eachTeam.name}
+        />
         <p className="heading-for-list-item">{eachTeam.name}</p>
-      </li>
-    </Link>
+      </Link>
+    </li>
   )
 }
 
