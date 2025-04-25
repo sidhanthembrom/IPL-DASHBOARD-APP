@@ -21,13 +21,13 @@
   text-align: end;
 }
 
-@media(max-width: 425px){
-  .latest-match-container{
+@media (max-width: 425px) {
+  .latest-match-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .right-container{
+  .right-container {
     text-align: center;
   }
 }
